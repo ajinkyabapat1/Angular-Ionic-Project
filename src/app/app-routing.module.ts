@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'recipies',
+    loadChildren: () => import('./recipies/recipies.module').then( m => m.RecipiesPageModule)
+  },
 ];
 
 @NgModule({
