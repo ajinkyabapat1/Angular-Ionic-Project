@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: RecipiesPage
+  },
+  {
+    path: 'recipie-detail',
+    loadChildren: () => import('./recipie-detail/recipie-detail.module').then( m => m.RecipieDetailPageModule)
   }
 ];
 
